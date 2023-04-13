@@ -1,0 +1,111 @@
+/* Set default styles for all screen sizes */
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(74, 216, 152);
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    width: 20vw;
+    gap: 50px;
+  }
+  
+  .gametable {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .box {
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+  }
+  
+  .box:hover {
+    background-color: aquamarine;
+  }
+  
+  .music {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  button {
+    padding: 20px;
+    background:linear-gradient(gray,white);
+    border-radius: 14px;
+  }
+  
+  button:hover {
+    box-shadow: 2px 2px 2px 2px rgb(63, 41, 41);
+  }
+  
+  /* Use media queries to adjust styles for different screen sizes */
+  @media screen and (max-width: 768px) {
+    /* Set container width to 90vw */
+    .container {
+        height: 100vh;
+      width: 50vw;
+    }
+  
+    /* Set gametable width to 100% */
+    .gametable {
+      width: 50vw;
+    }
+  
+    /* Decrease font-size of box element */
+    .box {
+      font-size: 24px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Set container width to 100vw */
+    .container {
+      width: 100%;
+    }
+    .gametable {
+        width: 50vw;
+      }
+  
+    /* Set flex-direction of container to column */
+    .container {
+      flex-direction: column;
+    }
+  
+    /* Increase gap between elements in container */
+    .container {
+      gap: 20px;
+    }
+  
+    /* Decrease font-size of box element */
+    .box {
+      font-size: 18px;
+    }
+  
+    /* Decrease padding of button element */
+    button {
+      padding: 10px;
+    }
+  }
+  
